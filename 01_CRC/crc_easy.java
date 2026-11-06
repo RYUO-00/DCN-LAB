@@ -37,7 +37,9 @@ public class crc
         int d = divisor.length();
 
         // Append (divisor length - 1) zeros to the bits
-        String padded = bits + "0".repeat(d - 1);
+        String padded = bits;
+        for (int i = 0; i < d - 1; i++)
+            padded = padded + "0";
         System.out.println("message bits after appending divisor_length-1 0's:");
         printSpaced(padded);
 
